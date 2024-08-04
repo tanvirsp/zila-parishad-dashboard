@@ -57,7 +57,7 @@ const RegisteredStudentsList = () => {
                                     <td>{item.birthCertificateNumber}</td>
                                     <td>{item.presentUpazilla}</td>
                                     <td>{item.mobile}</td>
-                                    <td>{item.status ==="0"? "Pending" :"Selected"}</td>
+                                    <td>{item.status ==="0"? <span className="text-danger">Waiting</span> : <span className="text-success">Selected</span>}</td>
                                     <td> 
                                         <button onClick={() => navigate(`/student-details/${item._id}`)}  className="btn btn-warning"> View</button>  
                                         {

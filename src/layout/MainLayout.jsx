@@ -8,6 +8,7 @@ import { PiStudent, PiCertificateLight } from "react-icons/pi";
 import { IoOptions } from "react-icons/io5";
 import { CiCalendarDate, CiBullhorn  } from "react-icons/ci";
 import { LiaSwatchbookSolid } from "react-icons/lia";
+import { BiDonateHeart } from "react-icons/bi";
 
 
 
@@ -37,6 +38,8 @@ const MainLayout = () => {
                         <li> <NavLink to="/make-result" className={({ isActive}) => isActive ? "active nav-link" : " nav-link" }> <PiCertificateLight /> Make Result</NavLink> </li>
                         <li> <NavLink to="/sessions"  className={({ isActive}) => isActive ? "active nav-link" : " nav-link" }> <CiCalendarDate /> Sessions</NavLink> </li>
                         <li> <NavLink to="/courses"  className={({ isActive}) => isActive ? "active nav-link" : " nav-link" }> <LiaSwatchbookSolid /> Courses</NavLink> </li>
+                        <hr />
+                        <li> <NavLink to="/scholarship"  className={({ isActive}) => isActive ? "active nav-link" : " nav-link" }> <BiDonateHeart /> Scholarship</NavLink> </li>
                         <li> <NavLink to="/notice"  className={({ isActive}) => isActive ? "active nav-link" : " nav-link" }> <CiBullhorn  /> Notice</NavLink> </li>
                         <li> <NavLink to="/options"  className={({ isActive}) => isActive ? "active nav-link" : " nav-link" }> <IoOptions /> Options</NavLink> </li>
                     </ul>

@@ -29,9 +29,18 @@ const CreateSession = () => {
         <div className=" p-5 bg-white rounded-3 border">
           <h4 className="mb-5">Create A New Session</h4>
              <form onSubmit={handleSubmit(onSubmit)}>
-                <label className="form-label">Session Title</label>
-                <input className="form-control" {...register("session", { required: true })} placeholder="Add session name" />
-                {errors.session && <span className="error-message">This field is required</span>}
+                <div className="row">
+                  <div className="col-md-6">
+                    <label className="form-label">Session Title</label>
+                    <input className="form-control" {...register("session", { required: true })} placeholder="Add session name" />
+                    {errors.session && <span className="error-message">This field is required</span>}
+                  </div>
+                  <div className="col-md-6">
+                    <label className="form-label">Register Number (1st 3 digit)</label>
+                    <input className="form-control" {...register("registerNumber", { required: true })} placeholder="3 Digit of Register Number" />
+                    {errors.session && <span className="error-message">This field is required</span>}
+                  </div>
+                </div>
 
                 <label className="form-label mt-4">Session Description</label>
                 <textarea rows="4" placeholder="Add session description" className="form-control"{...register("des")}></textarea>

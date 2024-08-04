@@ -1,9 +1,12 @@
+import ResultFilterBar from "../compoments/ResultFilterBar";
+import ResultTable from "../compoments/ResultTable";
 
 
 const MakeResultPage = () => {
     return (
         <div>
-            <h2>Make Result Page</h2>
+            <ResultFilterBar />
+            <ResultTable />
         </div>
     );
 };

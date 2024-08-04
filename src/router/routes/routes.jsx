@@ -8,6 +8,7 @@ import SessionsPage from '../../pages/SessionsPage';
 import MakeResultPage from "../../pages/MakeResultPage";
 import NoticePage from "../../pages/NoticePage";
 import CoursePage from "../../pages/CoursePage";
+import ScholarshipPage from "../../pages/ScholarshipPage";
 
 
 const router = createBrowserRouter([
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
             {
                 path: "/options",
                 element: <OptionsPage />
+            },
+            {
+                path: "/scholarship",
+                element: <ScholarshipPage />
             },
 
 
