@@ -1,0 +1,142 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@100..900&display=swap');
+
+
+* {
+  padding: 0 ;
+  margin: 0 ;
+  box-sizing: border-box;
+  font-family: "Noto Sans Bengali", "Hind Siliguri", sans-serif;
+
+}
+
+body {
+  padding: 35px;
+  margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+.title {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 5px
+}
+
+.top-section {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 200px auto 200px;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.picture {
+    position: absolute;
+    top: 35px;
+    right: 0;
+}
+
+.picture img {
+    width:150px;
+    border: 1px solid black
+}
+
+
+h2{
+    font-size: 35px;
+    margin-top: 10px
+}
+
+h3 {
+    font-size: 25px;
+}
+
+h5{
+    font-size: 18px;
+}
+
+h6{
+    font-size: 16px;
+}
+
+p {
+    font-size: 14px;
+}
+
+small {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+table {
+   
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid lightgray;
+    
+}
+
+td {
+    padding: 3px 8px;
+    font-size: 14px;
+}
+
+.info {
+    width: 210px
+}
+
+.two-column {
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    margin-top: 10px;
+}
+
+
+footer {
+    position: relative;
+    margin-top: 25px;
+}
+
+.applicant-signature {
+    text-align: center;
+    width: 300px;
+    top: 30px;
+    position: absolute;
+    right: 0
+}
+
+.support {
+    position: absolute;
+    right: 0;
+    top: 110px;
+}
+
+.line {
+    
+    width: 100%;
+    height: 2px;
+    display: block;
+    background-color: black;
+    margin-bottom: 5px
+}
+
+.institute-signature {
+    text-align: center;
+    position: absolute;
+    right: 0;
+    top: 160px;
+}

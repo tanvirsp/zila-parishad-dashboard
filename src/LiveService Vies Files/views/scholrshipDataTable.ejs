@@ -1,0 +1,126 @@
+
+<head>
+   
+    <style>
+        @import url('https://cdn.rawgit.com/sh4hids/bangla-web-fonts/solaimanlipi/stylesheet.css');
+
+      
+* {
+  padding: 0 ;
+  margin: 0 ;
+  box-sizing: border-box;
+
+}
+
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'SolaimanLipi', sans-serif;
+                                            
+
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+
+
+h2{
+    font-size: 23px;
+    margin-top: 10px;
+
+}
+
+
+
+h6{
+    font-size: 16px;
+}
+
+p {
+    font-size: 12px;
+}
+
+small {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+table {
+   
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, td {
+    border: 1px solid lightgray;
+    font-size: 12px ;
+    
+}
+
+td {
+    padding: 5px 8px;
+    
+}
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section style="position: relative;">
+      
+            <div style="position: absolute; left:0" >
+                <img width="75px" src="https://zpjamalpur.com/assets/logo-r3VuArjo.png" alt="logo">
+            </div>
+            <div style="position: absolute; left: 0; right: 0; margin: auto ; text-align: center;" >
+                <h3>জেলা পরিষদ, জামালপুর।</h3>
+                <small>www.zpjamalpur.com</small>
+            </div>
+        </section>
+
+        <section style="text-align: center; position: absolute; top: 70px; left: 0; right: 0; margin: auto">
+            <h2>শিক্ষাবৃত্তি আবেদনকারীর তালিকা</h2>
+            <h3> <%= data[0].sessionDetails.session %>  </h3>
+        </section>
+        <section style="position: relative; top: 160px">
+            <table>
+                <tr>
+                    <td>SL</td>
+                    <td>Reg. No</td>
+                    <td>Name</td>
+                    <td>Phone</td>
+                    <td>Birth Certificate No.</td>
+                    <td>Status</td>
+                </tr>
+                <% data.map( (item, index) =>{ %>
+                    <tr>
+                        <td><%= index + 1 %> </td>
+                        <td><%= item.regNumber %> </td>
+                        <td><%= item.name %> </td>
+                        <td><%= item.mobile %> </td>
+                        <td><%= item.birthCertificateNumber %> </td>
+                        <td> </td>
+                    </tr>
+                <%  } ) %>
+                
+              
+            </table>
+           
+        </section>
+
+
+     
+
+    </div>
+    
+</body>

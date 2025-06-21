@@ -1,0 +1,39 @@
+const pdf = require('html-pdf');
+const ejs = require('ejs');
+
+const GeneratePDF = async(objData, ejsTemplate) =>{
+    try {
+
+        const html = await ejs.renderFile(`${__dirname}/../views/${ejsTemplate}`, objData);
+
+        const options = {
+            format: 'A4',
+            orientation: 'landscape',
+        };
+        
+       
+            
+        
+
+        // Create a promise wrapper around the toFile method
+        const createPdf = (html, options) => {
+            return new Promise((resolve, reject) => {
+            pdf.create(html, options).toFile(`${__dirname}/../../pdf/certificate.pdf`, (err, res) => {
+                if (err) return reject(err);
+                resolve(res);
+            });
+            });
+        };
+        
+        
+       const result =  await createPdf(html, options);
+       return result
+    
+
+    } catch (error) {
+       return error
+    }
+}
+
+
+module.exports=GeneratePDF;

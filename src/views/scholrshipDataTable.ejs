@@ -1,0 +1,141 @@
+
+<head>
+   
+    <style>
+        @import url('https://cdn.rawgit.com/sh4hids/bangla-web-fonts/solaimanlipi/stylesheet.css');
+
+      
+* {
+  padding: 0 ;
+  margin: 0 ;
+  box-sizing: border-box;
+
+}
+
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'SolaimanLipi', sans-serif;
+                                            
+
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+
+
+h2{
+    font-size: 28px;
+    margin-top: 10px;
+
+}
+
+
+
+h6{
+    font-size: 16px;
+}
+
+p {
+    font-size: 14px;
+}
+
+small {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+table {
+   
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, td {
+    border: 1px solid lightgray;
+    
+}
+
+td {
+    padding: 5px 8px;
+    font-size: 14x;
+}
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section style="position: relative;">
+      
+            <div style="position: absolute; left:0" >
+                <img width="100px" src="https://zpjamalpur.com/assets/logo-r3VuArjo.png" alt="logo">
+            </div>
+            <div style="position: absolute; left: 0; right: 0; margin: auto ; text-align: center;" >
+                <h3>জেলা পরিষদ, জামালপুর।</h3>
+                <small>www.zpjamalpur.com</small>
+            </div>
+        </section>
+
+        <section style="text-align: center; position: absolute; top: 70px; left: 0; right: 0; margin: auto">
+            <h2>শিক্ষাবৃত্তি আবেদনকারীর তালিকা</h2>
+            <h3> <%= data[0].sessionDetails.session %>  </h3>
+        </section>
+        <section style="position: relative; top: 160px">
+            <table>
+                <tr style="background-color:#f7f7f7">
+                    <td>ক্র: নং</td>
+                    <td>আবেদনকারীর নাম, পিতার নাম ও মাতার নাম</td>
+                    <td>শিক্ষা প্রতিষ্ঠানের নাম</td>
+                    <td>এস.এস.সি বা সমমান পরীক্ষার বিভাগ</td>
+                    <td>এস.এস.সি বা সমমান পরীক্ষার প্রাপ্ত ফলাফল</td>
+                    <td>এইচ.এস.সি বা সমমান পরীক্ষার বিভাগ</td>
+                    <td>এইচ.এস.সি বা সমমান পরীক্ষার প্রাপ্ত ফলাফল</td>
+                    <td>শিক্ষা প্রতিষ্ঠানের সুপারিশ</td>
+                    <td>কোটা সম্পর্কিত তথ্য</td>
+                    <td>বরাদ্দকৃত টাকার পরিমাণ</td>
+                    <td>মন্তব্য</td>
+
+                    
+                </tr>
+                <% data.map( (item, index) =>{ %>
+                    <tr>
+                        <td><%= index + 1 %> </td>
+                        <td>
+                            <%= item.name %> <br> 
+                            <%= item.fatherName %> <br> 
+                            <%= item.motherName %> <br> 
+                        </td>
+                        <td><%= item.instuteNameAndAddress %> </td>
+                        <td><%= item.examOneGroup %> </td>
+                        <td><%= item.examOneResult %> </td>
+                        <td><%= item.examTwoGroup %> </td>
+                        <td><%= item.examTwoResult %> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                    </tr>
+                <%  } ) %>
+                
+              
+            </table>
+           
+        </section>
+
+
+     
+
+    </div>
+    
+</body>

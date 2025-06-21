@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Code</title>
+    <style>
+       
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        body {
+            font-family: "Roboto", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 16px;
+            background-color: #F2F2F2;
+        }
+        h5 {
+            padding: 0;
+            margin: 0;
+        }
+
+        .card {
+            width: 500px;
+            margin: 25px  auto;
+            border: 1px solid rgba(128, 128, 128, 0.374);
+            background-color: white;
+            padding: 35px
+        }
+        .card-header {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        .card-title {
+            text-align: center;
+            font-size: 30px;
+            font-weight: 600;
+            color: rgb(52, 54, 52);
+            background-color: rgba(175, 175, 175, 0.2);
+            margin: 0;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card ">
+        <h5 class="card-header">Zila Parishad, Jamalpur</h5>
+        <div class="card-body">
+          <h2>Verification Code</h2>
+          <p>Your OTP code is:</p>
+          <h5 class="card-title"> <%= code  %> </h5>
+          
+        </div>
+      </div>
+
+  
+    
+</body>
+
+
+</html>

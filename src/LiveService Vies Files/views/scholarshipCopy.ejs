@@ -1,0 +1,364 @@
+
+<head>
+   
+    <style>
+        @import url('https://cdn.rawgit.com/sh4hids/bangla-web-fonts/solaimanlipi/stylesheet.css');
+
+      
+* {
+  padding: 0 ;
+  margin: 0 ;
+  box-sizing: border-box;
+
+}
+
+
+body {
+  padding: 25px;
+  margin: 0;
+  font-family: 'SolaimanLipi', sans-serif;
+                                            
+
+}
+
+.bengali-text {
+        font-family: 'Noto Sans Bengali', sans-serif;
+      }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+.title {
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 3px
+}
+
+
+h2{
+    font-size: 23px;
+    margin-top: 10px;
+
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h5{
+    font-size: 16px;
+}
+
+h6{
+    font-size: 12px;
+}
+
+p {
+    font-size: 11px;
+}
+
+small {
+    font-size: 11px;
+    font-weight: 500;
+}
+
+table {
+   
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid lightgray;
+    font-size: 11px;
+    
+}
+
+td {
+    padding: 2px 5px;
+    
+}
+
+
+
+
+.applicant-signature {
+    text-align: center;
+    width: 270px;
+    top: 30px;
+    position: absolute;
+    right: 0px
+}
+
+
+.line {
+    
+    width: 100%;
+    height: 1px;
+    display: block;
+    background-color: black;
+    margin-bottom: 5px
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section style="position: relative;">
+      
+            <div style="position: absolute; left:0" >
+                <img width="80px" src="https://zpjamalpur.com/assets/logo-r3VuArjo.png" alt="logo">
+            </div>
+            <div style="position: absolute; left: 0; right: 0; margin: auto ; text-align: center;" >
+                <h3>জেলা পরিষদ, জামালপুর।</h3>
+                <small>www.zpjamalpur.com</small>
+            </div>
+            <div style="position: absolute; top: 0; right: 0; text-align: center; border: 1px solid black" >
+                <img width="100px" src="https://admin.zpjamalpur.com/<%= attachment.profileImg %>" alt="picture">
+                <h6 style="font-size: 13px;">রেজি: <%= regNumber %></h6>
+            </div>
+        </section>
+
+        <section style="text-align: center; position: absolute; top: 50px; left: 0; right: 0; margin: auto">
+            <h2>শিক্ষাবৃত্তির জন্য আবেদন</h2>
+            <h6>(শুধুমাত্র জামালপুর জেলার স্থায়ী বাসিন্দদের জন্য)</h6>
+        </section>
+        <section style="position: relative; top: 120px">
+            <h4 class="title">সাধারণ তথ্য:</h4>
+            <table>
+                <tr>
+                    <td>প্রশিক্ষনার্থীর নাম (বাংলায়):</td>
+                    <td><%= name %></td>
+
+                    <td>প্রশিক্ষনার্থীর নাম (ইংরেজীতে)</td>
+                    <td><%= nameInEnglish %></td>
+                </tr>
+                <tr>
+                    <td>পিতার নাম (বাংলায়):</td>
+                    <td> <%= fatherName %> </td>
+
+                    <td >পিতার নাম (ইংরেজীতে)</td>
+                    <td>  <%= fatherNameinEnglish %> </td>
+                </tr>
+                <tr>
+                    <td >মাতার নাম (বাংলায়):</td>
+                    <td>  <%= motherName %> </td>
+
+                    <td>মাতার নাম (ইংরেজীতে):</td>
+                    <td> <%= motherNameInEnglish %> </td>
+                </tr>
+                <tr>
+                    <td >জন্ম তারিখ:</td>
+                    <td> <%= birthDate %> </td>
+
+                    <td>জন্ম নিবন্ধন নাম্বার:</td>
+                    <td> <%= birthCertificateNumber %> </td>
+                </tr>
+                <tr></tr>
+                    <td>সেশন:</td>
+                    <td>  <%= sessionDetails.session %> </td>
+
+                    <td> </td>
+                    <td> </td>
+                </tr>
+            </table>
+        </section>
+
+
+        <section style="position: relative; top: 120px">
+            <div style="width: 49%; position: absolute; left:0">
+                <h4 class="title">স্থায়ী ঠিকানা:</h4>
+                <table>
+                    <tr>
+                        <td class="info">গ্রাম/বাসা নম্বর:</td>
+                        <td> <%= parmanentVillage %>  </td> 
+                    </tr>
+                    <tr>
+                        <td class="info">এলাকা:</td>
+                        <td> <%= parmanentArea %>  </td>
+                    </tr>
+                    <tr>
+                        <td class="info">ডাকঘর:</td>
+                        <td> <%= parmanentPostOffice %>  </td>
+                    </tr>
+                    <tr>
+                        <td class="info">উপজেলা:</td>
+                        <td>  <%= parmanentUpazilla %>  </td>                        
+                    </tr>
+                    <tr>
+                        <td class="info">জেলা:</td>
+                        <td>  <%= parmanentDistrict %> </td>
+                    </tr>
+                </table>
+            </div>
+            <div style="width: 49%; position: absolute; right:0">
+                <h4 class="title">বর্তমান ঠিকানা:</h4>
+                <table>
+                    <tr>
+                        <td class="info">গ্রাম/বাসা নম্বর:</td>
+                        <td> <%= presentVillage %>  </td> 
+                    </tr>
+                    <tr>
+                        <td class="info">এলাকা:</td>
+                        <td> <%= presentArea %> </td>
+                    </tr>
+                    <tr>
+                        <td class="info">ডাকঘর:</td>
+                        <td>  <%= presentPostOffice %> </td>
+                    </tr>
+                    <tr>
+                        <td class="info">উপজেলা:</td>
+                        <td> <%= presentUpazilla %> </td>                        
+                    </tr>
+                    <tr>
+                        <td class="info">জেলা:</td>
+                        <td> <%= presentDistrict %> </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section style="position: relative; top:250px">
+            <div style="width: 49%; position: absolute;  left:0">
+                <h4 class="title">এস এস সি / সমমান পরীক্ষা পাসের বিবরণ:</h4>
+                <table>
+                    <tr>
+                        <td class="info">পরীক্ষার নাম:</td>
+                        <td> <%= examOne %> </td> 
+                    </tr>
+                    <tr>
+                        <td class="info">বোর্ড:</td>
+                        <td> <%= examOneBoard %> </td>
+                    </tr>
+                    <tr>
+                        <td class="info">গ্রুপ/বিভাগ:</td>
+                        <td> <%= examOneGroup %> </td>
+                    </tr>
+                    <tr>
+                        <td class="info">পাশের সন:</td>
+                        <td><%= examOneYear %></td>                        
+                    </tr>
+                    <tr>
+                        <td class="info">রোল নাম্বার:</td>
+                        <td><%= examOneRoll %></td>
+                    </tr>
+                    <tr>
+                        <td class="info">রেজিস্ট্রেশন নাম্বার:</td>
+                        <td><%= examOneReg %></td>
+                    </tr>
+                    <tr>
+                        <td class="info">ফলাফল:</td>
+                        <td><%= examOneResult %></td>
+                    </tr>
+                </table>
+            </div>
+            <div style="width: 49%; position: absolute; right:0">
+                <h4 class="title">এইচ এস সি / সমমান পরীক্ষা পাসের বিবরণ:</h4>
+                <table>
+                    <tr>
+                        <td class="info">পরীক্ষার নাম:</td>
+                        <td> <%= examTwo %></td> 
+                    </tr>
+                    <tr>
+                        <td class="info">বোর্ড:</td>
+                        <td>  <%= examTwoBoard %> </td>
+                    </tr>
+                    <tr>
+                        <td class="info">গ্রুপ/বিভাগ:</td>
+                        <td><%= examTwoGroup %> </td>
+                    </tr>
+                    <tr>
+                        <td class="info">পাশের সন:</td>
+                        <td><%= examTwoYear %></td>                        
+                    </tr>
+                    <tr>
+                        <td class="info">রোল নাম্বার:</td>
+                        <td><%= examTwoRoll %></td>
+                    </tr>
+                    <tr>
+                        <td class="info">রেজিস্ট্রেশন নাম্বার:</td>
+                        <td><%= examTwoReg %></td>
+                    </tr>
+                    <tr>
+                        <td class="info">ফলাফল:</td>
+                        <td><%= examTwoResult %></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <section  style="position: relative; top: 420px">
+            <div style="width: 49%; position: absolute; left:0">
+                <h4 class="title">অভিভাবকের তথ্য:</h4>
+                <table>
+                    <tr>
+                        <td>পিতা/ অভিভাবকের NID নম্বর:</td>
+                        <td> <%= fatherNID %> </td> 
+                    </tr>
+                    <tr>
+                        <td >পিতা/ অভিভাবকের বাৎসরি আয়:</td>
+                        <td> <%= fatherYearlyIncome %> </td>
+                    </tr>
+                    <tr>
+                        <td >আবেদনকারী মুক্তিযোদ্ধার সন্তান/ নাতি নাতনি কি?</td>
+                        <td> <%- cota == '0' ? 'না' : 'হ্যা' %></td>
+                    </tr>
+                    <tr>
+                        <td >আবেদনকারী প্রতিবন্ধী কি?</td>
+                        <td> <%- disabled == '0' ? 'না' : 'হ্যা' %> </td>                        
+                    </tr>
+                    <tr>
+                        <td >আবেদনকারী উপজাতি কি?</td>
+                        <td>  <%- upazati == '0' ? 'না' : 'হ্যা' %>  </td>
+                    </tr>
+        
+                </table>
+            </div>
+            <div style="width: 49%; position: absolute; right:0">
+                <h4 class="title">যোগাযোগের তথ্য:</h4>
+                <table>
+                    <tr>
+                        <td >মোবাইল নম্বর:</td>
+                        <td> <%= mobile %>  </td> 
+                    </tr>
+                    <tr>
+                        <td >ইমেইল:</td>
+                        <td>   <%= email %>  </td>
+                    </tr>
+                    <tr>
+                        <td >অধ্যায়নরত প্রতিষ্ঠানের নাম ও ঠিকানা:</td>
+                        <td> <%= instuteNameAndAddress %>  </td>
+                    </tr>
+                    
+                </table>
+            </div>
+        </section>
+
+
+        <footer style="position: relative; top:540px">
+           
+            <div class="applicant-signature">
+                <div class="line"></div>
+                <p>আবেদনকারীর স্বাক্ষর ও তারিখ</p>
+            </div>
+          
+
+            <div style=" position: absolute; right: 0; top: 60px;">
+                <p>শিক্ষাপ্রতিষ্ঠান/বিভাগীয় প্রধানের মতামত/সুপারিশ .................................................................................................................................................................................</p>
+            </div>
+
+            <div style="text-align: center; position: absolute;  right: 0; top: 100px;">
+                <p>স্বাক্ষর ও সীল <br> প্রতিষ্ঠান প্রধান/বিভাগীয় প্রধান</p>
+            </div>
+
+        </footer>
+        
+        
+
+
+    </div>
+    
+</body>

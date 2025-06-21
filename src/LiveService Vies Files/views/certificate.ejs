@@ -1,0 +1,143 @@
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate</title>
+    
+        <style>
+   
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    
+    *{
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+      }
+      p {
+          font-size: 14px !important;
+          line-height: 20px ;
+      }
+
+
+       
+
+      body {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .container {
+          position: relative;
+          height: 100%;
+		  width: 100%
+          
+      }
+      .bg-image {
+        height: 100%
+      }
+
+      .serial {
+        position: absolute;
+        font-size: 16px;
+        top: 215px;
+        right:130px ;
+      }
+
+      .text-container {
+          position: absolute;
+          top: 45%;
+          padding:  0 13%;
+          text-align: justify;
+      }
+      
+     
+
+      .line {
+          height: 2px;
+          width: 200px;
+          display: block;
+          background-color: black;
+          margin: auto;
+      }
+
+
+
+      .author {
+          display: flex;
+          justify-content:space-between;
+      }
+
+      .signature-left {
+          text-align: center;
+          position: absolute;
+          left: 18%;
+          bottom: 18%
+      }
+
+      .signature-right {
+          text-align: center;
+          position: absolute;
+          right: 18%;
+          bottom: 18%
+      }
+
+
+      .name {
+          font-size: 15px;
+          margin-top: 8px;
+      }
+
+
+      .tag {
+            position: absolute;
+            top: 20.4%;
+            right: 18.2% ;
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: black;
+            text-align: center;
+            height: 40px;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+    
+
+
+
+    </style>
+	
+</head>
+<body>
+    <section class="container">
+
+        <img class="bg-image" src="https://admin.zpjamalpur.com/certificate-2024.jpg" alt="">
+        <h6 class="serial">SL: <%= regNumber  %>  </h6>
+        <div class="text-container">
+            <p>This is to Certify that Mr/Ms.  <b> <%= studentDetails.nameInEnglish  %>  </b>, Son/Daughter of  <b> <%= studentDetails.fatherNameinEnglish  %>  </b>, Has Successfuly completed a course of 70 days traninng on   <b> <%= courseDetails.nameInEnglish  %>  </b>   powered by Jamalpur Zila Pariahad from 24th June to 6th November under the project of developing life skill and increasing awarness training activities for self development with obtained grade  <b> <%= mark %>  </b></p>
+        </div>
+        <div class="footer">
+            <div class="signature-left">
+                <div class="line"></div>
+                <h5 class="name">(Mun Mun Jahan Liza)  </h5>
+                <p>Chief Executive Officer</p>
+                <p>Zilla Parishad, Jamalpur</p>
+            </div>
+            <div class="signature-right">
+                <div class="line"></div>
+                <h5 class="name">(Person Name)  </h5>
+                <p>Designation</p>
+                <p>Zilla Parishad, Jamalpur</p>
+            </div>
+        </div>
+        <div class="tag">
+            <h3><%= mark %> </h3>
+        </div>
+
+
+    </section>
+</body>
