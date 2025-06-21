@@ -8,7 +8,8 @@ export default defineConfig({
     proxy: {
       '/api': {
         // target: 'http://localhost:5000'
-        target: 'http://zilaporishad.ajkerjamalpur.com'
+        // target: 'http://zilaporishad.ajkerjamalpur.com'
+        target: 'https://zila-parishad-dashboard.vercel.app'
       }
     }
   }
